@@ -6,36 +6,48 @@ import { useNavigate } from "react-router-dom";
 function Signup() {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-  const [passwordcheck, setPasswordCheck] = useState("");
+  const [Repassword, setRepassword] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
-  const [passwordMatch, setPasswordMatch] = useState(false);
-  const [passwordMatch1, setPasswordMatch1] = useState(false);
   const [idcheck, setIdcheck] = useState(false);
+  const [passwordcheck, setPasswordCheck] = useState(false);
+  const [Repasswordcheck, setRePasswordCheck] = useState(false);
   const [emailcheck, setEmailCheck] = useState(false);
   const [namecheck, setNameCheck] = useState(false);
   const [nicknamecheck, setNickNameCheck] = useState(false);
   const [phoneNocheck, setPhoneNocheck] = useState(false);
+  const [equal, setEqual] = useState(false);
 
   const Idnullcheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     setId(e.target.value);
+    setIdcheck(false);
   };
-  const PasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const Passwordcheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
+    setPasswordCheck(false);
   };
-  const PasswordCheckChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPasswordCheck(e.target.value);
+  const RePasswordCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setRepassword(e.target.value);
+    setRePasswordCheck(false);
   };
   const emailCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
+    setEmailCheck(false);
+  };
+
+  const nameCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setName(e.target.value);
+    setNameCheck(false);
   };
   const nicknameCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNickname(e.target.value);
+    setNickNameCheck(false);
   };
   const phoneNoCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPhoneNo(e.target.value);
+    setPhoneNocheck(false);
   };
 
   const navigate = useNavigate();
@@ -44,14 +56,17 @@ function Signup() {
     if (!id) {
       setIdcheck(true);
     }
-    if (password.length < 1 || passwordcheck.length < 1) {
-      setPasswordMatch1(true);
+    if (!password) {
+      setPasswordCheck(true);
     }
-    if (password == passwordcheck) {
-      setPasswordMatch(true);
+    if (!Repassword) {
+      setRePasswordCheck(true);
     }
     if (!email) {
       setEmailCheck(true);
+    }
+    if (!name) {
+      setNameCheck(true);
     }
     if (!nickname) {
       setNickNameCheck(true);
@@ -59,10 +74,31 @@ function Signup() {
     if (!phoneNo) {
       setPhoneNocheck(true);
     }
-    if (passwordMatch == true && passwordMatch1 == true && idcheck == true) {
+    if (password !== Repassword) {
+      setEqual(true);
+    } else {
+      setEqual(false);
+    }
+
+    const noneValueCheck =
+      id || password || Repassword || email || name || nickname || phoneNo;
+
+    if (
+      idcheck === false &&
+      passwordcheck === false &&
+      Repasswordcheck === false &&
+      emailcheck === false &&
+      namecheck === false &&
+      nicknamecheck === false &&
+      phoneNocheck === false &&
+      equal === false &&
+      noneValueCheck &&
+      password === Repassword
+    ) {
       navigate("/");
     }
   };
+
   return (
     <div className="outer">
       <nav className="Signpadding">
@@ -79,11 +115,11 @@ function Signup() {
           />
         </div>
         {idcheck && (
-          <a className="none-id">
+          <span className="none-id">
             아이디를 입력해주세요
             <br />
             <br />
-          </a>
+          </span>
         )}
         <div className="PWN">
           <label>비밀번호</label>
@@ -94,10 +130,16 @@ function Signup() {
             id="password"
             placeholder=" 최소 6자 이상(알파벳,숫자 필수)"
             value={password}
-            onChange={PasswordChange}
+            onChange={Passwordcheck}
           />
-
           <br />
+          {passwordcheck && (
+            <span className="PW-null">
+              비밀번호를 입력해주세요
+              <br />
+              <br />
+            </span>
+          )}
 
           <label>비밀번호 확인</label>
           <div className="PWcheck">
@@ -105,26 +147,26 @@ function Signup() {
               type="password"
               id="paswordCheck"
               placeholder="위의 비밀번호와 동일하게 작성하여주세요"
-              value={passwordcheck}
-              onChange={PasswordCheckChange}
+              value={Repassword}
+              onChange={RePasswordCheck}
             />
           </div>
         </div>
-        {passwordMatch1 && (
-          <a className="none-Message">
-            비밀번호와 비밀번호 확인을 입력해주세요
+        {Repasswordcheck && (
+          <span className="REPW-null">
+            비밀번호 확인을 입력해주세요
             <br />
             <br />
-          </a>
-        )}
-        {passwordMatch && (
-          <a className="error-message">
-            비밀번호가 일치하지않습니다
-            <br />
-            <br />
-          </a>
+          </span>
         )}
 
+        {equal && (
+          <span className="equal-check">
+            비밀번호를 일치시켜주세요
+            <br />
+            <br />
+          </span>
+        )}
         <div className="Email">
           <label>이메일</label>
         </div>
@@ -139,19 +181,32 @@ function Signup() {
           <br />
         </div>
         {emailcheck && (
-          <a className="email-null">
+          <span className="email-null">
             이메일을 입력해주세요
             <br />
             <br />
-          </a>
+          </span>
         )}
         <div className="Name">
-          <label>실명</label>
+          <label>이름</label>
         </div>
         <div className="Nametextbox">
-          <input type="text" id="name" placeholder=" 홍길동" />
+          <input
+            type="text"
+            id="name"
+            placeholder=" 홍길동"
+            value={name}
+            onChange={nameCheck}
+          />
           <br />
         </div>
+        {namecheck && (
+          <span className="name-null">
+            이름을 입력해주세요
+            <br />
+            <br />
+          </span>
+        )}
         <div className="Nickname">
           <label>닉네임</label>
         </div>
@@ -165,10 +220,10 @@ function Signup() {
           />
         </div>
         {nicknamecheck && (
-          <a className="nickname-null">
+          <span className="nickname-null">
             <br />
             닉네임을 입력하여주세요
-          </a>
+          </span>
         )}
         <br />
         <br />
@@ -187,11 +242,11 @@ function Signup() {
         </div>
         <br />
         {phoneNocheck && (
-          <a className="phoneNo-null">
+          <span className="phoneNo-null">
             휴대폰을 입력하여주세요
             <br />
             <br />
-          </a>
+          </span>
         )}
         <br />
         <button type="submit" onClick={Alert}>
