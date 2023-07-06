@@ -1,0 +1,48 @@
+.outer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  flex-direction: row;
+  margin-top: 1%;
+  margin-left: 15%;
+  margin-right: 25%;
+}
+
+textarea {
+  width: 590px;
+  font-size: x-large;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+b {
+  font-size: x-large;
+}
+
+input {
+  border-radius: 10px;
+}
+
+div.divid img {
+  width: 150px;
+  height: 150px;
+  margin-left: 200px;
+}
+
+div.check4 button {
+  width: 590px;
+  height: 65px;
+  background-color: deepskyblue;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-size: larger;
+  font-style: inherit;
+}
+
+nav.AgreePadding {
+  padding-left: 22%;
+  padding-top: 5%;
+  padding-right: 10%;
+}

@@ -1,0 +1,66 @@
+div.IDtextbox input {
+  text-align: left;
+  opacity: 0.2;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+div.PWtextbox input {
+  text-align: left;
+  opacity: 0.2;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+div.Emailtextbox input {
+  text-align: left;
+  opacity: 0.2;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+div.Nametextbox input {
+  text-align: left;
+  opacity: 0.2;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+div.Nicknametextbox input {
+  text-align: left;
+  opacity: 0.2;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+div.PhoneNotextbox input {
+  text-align: left;
+  opacity: 0.2;
+  width: 350px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+button {
+  width: 350px;
+  height: 50px;
+  background-color: deepskyblue;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+button:hover {
+  background-color: black;
+}
+nav.Signpadding {
+  padding-left: 27%;
+  padding-top: 10%;
+  padding-right: 20%;
+}
