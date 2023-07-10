@@ -46,3 +46,13 @@ nav.AgreePadding {
   padding-top: 5%;
   padding-right: 10%;
 }
+
+div.PagePadding {
+  padding-left: 37%;
+  padding-top: 5%;
+  padding-right: 37%;
+}
+
+div.check4 {
+  padding-bottom: 20%;
+}
