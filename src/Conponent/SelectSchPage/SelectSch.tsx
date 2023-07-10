@@ -19,7 +19,7 @@ function SelectSch() {
           <div className="imgbox">
             <img src={IconImg} alt="" />
             <label>
-              <b>학교 선택</b>
+              <b>학과 선택</b>
             </label>
           </div>
 
@@ -32,14 +32,6 @@ function SelectSch() {
                   {year}
                 </option>
               ))}
-            </select>
-          </div>
-
-          <div className="School">
-            <label>학교</label>
-            <br />
-            <select>
-              <option value="" placeholder="입학학교"></option>
             </select>
           </div>
 
