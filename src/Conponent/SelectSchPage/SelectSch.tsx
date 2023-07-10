@@ -6,12 +6,15 @@ import "./SelectSch.css";
 
 function SelectSch() {
   const AdmissionYearDropdown = () => {
-    const startYear = 1954;
-    const NowYear = new Date().getFullYear();
-    const ListYears = Array.from(
-      { length: NowYear - startYear + 1 },
-      (_, index) => startYear + index
-    );
+    const Listmajor = [
+      "인문계열",
+      "자연계열",
+      "사회계열",
+      "인문계열",
+      "예체능계열",
+      "교육계열",
+      "공학계열",
+    ];
 
     return (
       <div className="outer">
@@ -24,12 +27,15 @@ function SelectSch() {
           </div>
 
           <div className="Title">
-            <label>입학년도</label>
+            <label>전공계열</label>
             <br />
             <select>
-              {ListYears.map((year) => (
-                <option key={year} value={year} placeholder="입학년도">
-                  {year}
+              <option value="" disabled selected>
+                학과선택
+              </option>
+              {Listmajor.map((major) => (
+                <option placeholder="전공계열을 선택하여 주시기바랍니다.">
+                  {major}
                 </option>
               ))}
             </select>
