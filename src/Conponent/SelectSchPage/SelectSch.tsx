@@ -1,6 +1,4 @@
-import { useState } from "react";
 import IconImg from "./img/Icon.png";
-import { text } from "stream/consumers";
 import { Link } from "react-router-dom";
 import "./SelectSch.css";
 
