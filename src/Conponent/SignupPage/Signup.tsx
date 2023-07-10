@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 //비밀번호 확인 , // 전화번호
 function Signup() {
+  const [universe, setUniverse] = useState("");
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
   const [Repassword, setRepassword] = useState("");
@@ -11,6 +12,7 @@ function Signup() {
   const [name, setName] = useState("");
   const [nickname, setNickname] = useState("");
   const [phoneNo, setPhoneNo] = useState("");
+  const [universecheck, setUniversecheck] = useState(false);
   const [idcheck, setIdcheck] = useState(false);
   const [passwordcheck, setPasswordCheck] = useState(false);
   const [Repasswordcheck, setRePasswordCheck] = useState(false);
@@ -19,6 +21,11 @@ function Signup() {
   const [nicknamecheck, setNickNameCheck] = useState(false);
   const [phoneNocheck, setPhoneNocheck] = useState(false);
   const [equal, setEqual] = useState(false);
+
+  const universenullcheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUniverse(e.target.value);
+    setUniversecheck(false);
+  };
 
   const Idnullcheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     setId(e.target.value);
@@ -95,13 +102,25 @@ function Signup() {
       noneValueCheck &&
       password === Repassword
     ) {
-      navigate("/");
+      navigate("/SelectSch");
     }
   };
 
   return (
     <div className="outer">
       <nav className="Signpadding">
+        <div className="Universe">
+          <label>학교</label>
+        </div>
+        <div className="Universetextbox">
+          <input
+            id="Universe"
+            type="text"
+            placeholder="학교를 입력해주세요"
+            value={universe}
+            onChange={universenullcheck}
+          />
+        </div>
         <div className="ID">
           <label>아이디</label>
         </div>

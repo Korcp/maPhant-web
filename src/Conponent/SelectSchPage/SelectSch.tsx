@@ -51,8 +51,8 @@ function SelectSch() {
             </select>
           </div>
           <div className="next">
-            <Link to="/Signup">
-              <button type="submit">다음</button>
+            <Link to="/">
+              <button type="submit">완료</button>
             </Link>
           </div>
         </nav>

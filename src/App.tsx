@@ -1,11 +1,11 @@
 import React from "react";
 import logo from "./logo.svg";
-import Signup from "./Conponent/Signup";
-import LoginPage from "./Conponent/LoginPage";
+import Signup from "./Conponent/SignupPage/Signup";
+import LoginPage from "./Conponent/LoginPage/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Agree from "./Conponent/Agree";
-import SelectSch from "./Conponent/SelectSch";
-import SearchAccount from "./Conponent/SearchAccount";
+import Agree from "./Conponent/AgreePage/Agree";
+import SelectSch from "./Conponent/SelectSchPage/SelectSch";
+import SearchAccount from "./Conponent/SearchAccount/SearchAccount";
 function App() {
   return (
     <div>
