@@ -64,12 +64,8 @@ button {
   border: none;
   color: white;
 }
-
-button:hover {
-  background-color: black;
-}
 nav.Signpadding {
-  padding-left: 27%;
+  padding-left: 40%;
   padding-top: 10%;
   padding-right: 20%;
 }

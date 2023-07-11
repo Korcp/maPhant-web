@@ -7,18 +7,8 @@ div.Title input {
   margin-bottom: 20px;
 }
 
-div.School input {
-  text-align: left;
-  opacity: 0.2;
-  width: 350px;
-  height: 40px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
 div.Major input {
   text-align: left;
-  opacity: 0.2;
   width: 350px;
   height: 40px;
   border-radius: 10px;
@@ -43,7 +33,7 @@ div.Major label {
 }
 
 nav.margin {
-  padding-left: 27%;
+  padding-left: 40%;
   padding-top: 5%;
 }
 

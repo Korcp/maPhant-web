@@ -42,9 +42,11 @@ function SelectSch() {
           <div className="Major">
             <label>학과</label>
             <br />
-            <select>
-              <option value=""></option>
-            </select>
+            <input
+              type="text"
+              id="majorId"
+              placeholder="학과를 입력하여주세요"
+            />
           </div>
           <div className="next">
             <Link to="/">
