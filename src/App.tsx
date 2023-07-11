@@ -16,7 +16,7 @@ function App() {
             <Route path="/Agree" element={<Agree />} />
             <Route path="/SelectSch" element={<SelectSch />} />
             <Route path="/Signup" element={<Signup />} />
-            <Route path="SearchAccount" element={<SearchAccount />} />
+            <Route path="/SearchAccount" element={<SearchAccount />} />
           </Routes>
         </BrowserRouter>
       </div>
