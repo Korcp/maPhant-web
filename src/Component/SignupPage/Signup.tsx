@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Signup.css";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 function Signup() {
+  //input에 입력되는 value값
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -14,12 +15,9 @@ function Signup() {
   const emailRegEx = /^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+(ac\.kr)$/;
   const emailRegEx2 = /^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+(edu)$/;
   const onEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-    setEmailError(false);
-  };
-  const emailCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     const emailValue = e.target.value;
     const input = e.target as HTMLInputElement;
+    setEmail(emailValue);
     if (!emailValue) {
       setEmailError(true);
       input.setCustomValidity("이메일을 입력하여주세요");
@@ -29,7 +27,6 @@ function Signup() {
     } else {
       setEmailError(false);
       input.setCustomValidity("");
-      setEmail(emailValue);
     }
     input.reportValidity();
   };
@@ -40,14 +37,9 @@ function Signup() {
   const numberRegex = /[0-9]/;
   const specialCharRegex = /[!@#$%^&*()]/;
   const onpassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-    setPasswordError(false);
-  };
-
-  const passwordCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
     const pwvalue = e.target.value;
     const input = e.target as HTMLInputElement;
-
+    setPassword(pwvalue);
     if (!pwvalue) {
       setPasswordError(true);
       input.setCustomValidity("비밀번호를 입력하여 주세요");
@@ -82,7 +74,6 @@ function Signup() {
             placeholder="abc123@gwakkili.ac.kr"
             value={email}
             onChange={onEmail}
-            onBlur={emailCheck}
             required
           />
         </div>
@@ -98,7 +89,6 @@ function Signup() {
             placeholder="[영문 대, 소문자 1개 이상 + 숫자 1개 이상 + 특수문자 1개 이상]"
             value={password}
             onChange={onpassword}
-            onBlur={passwordCheck}
             required
           />
         </div>
