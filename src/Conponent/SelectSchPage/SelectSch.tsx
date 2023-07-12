@@ -50,7 +50,9 @@ function SelectSch() {
           </div>
           <div className="next">
             <Link to="/">
-              <button type="submit">완료</button>
+              <button type="submit" className="SelectBtn">
+                완료
+              </button>
             </Link>
           </div>
         </nav>

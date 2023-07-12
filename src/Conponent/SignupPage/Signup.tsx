@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "./Signup.css";
 
 function Signup() {
   return (
     <div className="SignupMain">
-      <p className="Title">회원가입</p>
+      <p className="SignupTitle">회원가입</p>
 
       <div className="container">
         <div className="inputcontainer">
@@ -99,9 +100,12 @@ function Signup() {
       </div>
       <div className="btndiv">
         <br />
-        <button type="submit" className="Btn">
-          회원가입
-        </button>
+
+        <Link to="/SelectSch">
+          <button type="submit" className="Btn">
+            회원가입
+          </button>
+        </Link>
       </div>
     </div>
   );
