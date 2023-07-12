@@ -1,3 +1,11 @@
+textarea {
+  width: 590px;
+  font-size: x-large;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
 b {
   font-size: x-large;
 }
@@ -49,6 +57,7 @@ div.Area4 textarea {
   margin-bottom: 5%;
   margin-top: 5%;
 }
+
 div.divid img {
   width: 25%;
   height: 25%;
@@ -59,13 +68,23 @@ div.divid img {
 div.check4 button {
   width: 100%;
   height: 65px;
-  background-color: deepskyblue;
+  background-color: #88c5fa;
   border-radius: 15px;
   border: none;
   color: white;
   font-size: larger;
   font-style: inherit;
+
   margin-left: 3%;
+}
+div.check4 button:hover {
+  background-color: rgb(95, 178, 242);
+}
+
+nav.AgreePadding {
+  padding-left: 22%;
+  padding-top: 5%;
+  padding-right: 10%;
 }
 
 div.PagePadding {

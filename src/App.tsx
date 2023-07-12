@@ -1,11 +1,12 @@
-import React from "react";
-import logo from "./logo.svg";
-import Signup from "./Conponent/SignupPage/Signup";
-import LoginPage from "./Conponent/LoginPage/LoginPage";
+import Signup from "./Component/SignupPage/Signup";
+import LoginPage from "./Component/LoginPage/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Agree from "./Conponent/AgreePage/Agree";
-import SelectSch from "./Conponent/SelectSchPage/SelectSch";
-import SearchAccount from "./Conponent/SearchAccount/SearchAccount";
+import Agree from "./Component/AgreePage/Agree";
+import SelectSch from "./Component/SelectSchPage/SelectSch";
+import SearchAccount from "./Component/SearchAccount/SearchAccount";
+import SearchAccountAuth from "./Component/SearchAccount/SearchAccount";
+import MainApp from "./Component/MainPage/MainApp";
+
 function App() {
   return (
     <div>
@@ -17,6 +18,8 @@ function App() {
             <Route path="/SelectSch" element={<SelectSch />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/SearchAccount" element={<SearchAccount />} />
+            <Route path="/SearchAccountAuth" element={<SearchAccountAuth />} />
+            <Route path="/MainPage" element={<MainApp />}></Route>
           </Routes>
         </BrowserRouter>
       </div>
