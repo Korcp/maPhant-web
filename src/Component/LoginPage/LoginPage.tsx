@@ -35,7 +35,7 @@ function LoginPage() {
         </Link>
         <br />
         <Link to="/SearchAccount">
-          <a className={classes.sign}>계정찾기</a>
+          <a className={classes.sign}>비밀번호 찾기</a>
         </Link>
         <br />
         <p className="new">
