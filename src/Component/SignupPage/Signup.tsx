@@ -29,17 +29,6 @@ function Signup() {
 
       <div className="container">
         <div className="inputcontainer">
-          <p className="label">아이디</p>
-          <input
-            className="inputField"
-            type="text"
-            placeholder="4~15 이내로 입력해주세요"
-          />
-        </div>
-      </div>
-
-      <div className="container">
-        <div className="inputcontainer">
           <p className="label">비밀번호</p>
           <input
             className="inputField"
