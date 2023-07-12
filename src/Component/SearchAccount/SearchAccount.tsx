@@ -27,9 +27,11 @@ function SearchAccount() {
             취소
           </button>
         </Link>
-        <button type="button" id="search" className={classes.search}>
-          계정 찾기
-        </button>
+        <Link to="/SearchAccountAuth">
+          <button type="button" id="search" className={classes.search}>
+            계정 찾기
+          </button>
+        </Link>
       </div>
     </div>
   );

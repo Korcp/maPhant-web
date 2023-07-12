@@ -1,12 +1,11 @@
-.outer {
+/* .outer {
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255);
   flex-direction: row;
   margin-top: 1%;
   margin-left: 15%;
   margin-right: 25%;
-}
+} */
 
 textarea {
   width: 590px;
@@ -20,10 +19,6 @@ b {
   font-size: x-large;
 }
 
-input {
-  border-radius: 10px;
-}
-
 div.divid img {
   width: 150px;
   height: 150px;
@@ -33,12 +28,15 @@ div.divid img {
 div.check4 button {
   width: 590px;
   height: 65px;
-  background-color: deepskyblue;
+  background-color: #88c5fa;
   border-radius: 15px;
   border: none;
   color: white;
   font-size: larger;
   font-style: inherit;
+}
+div.check4 button:hover{
+  background-color: rgb(95, 178, 242);
 }
 
 nav.AgreePadding {

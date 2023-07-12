@@ -33,7 +33,6 @@ function LoginPage() {
         </button>
         <br />
         <Link to="/SearchAccount">
-          {" "}
           <a className={classes.sign}>계정찾기</a>
         </Link>
         <br />
