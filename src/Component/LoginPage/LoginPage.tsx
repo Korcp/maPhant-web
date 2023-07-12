@@ -28,12 +28,13 @@ function LoginPage() {
           placeholder="비밀번호"
         />
         <br />
-        <button id="LoginBtn" className={classes.button}>
-          로그인
-        </button>
+        <Link to="/MainPage">
+          <button id="LoginBtn" className={classes.button}>
+            로그인
+          </button>
+        </Link>
         <br />
         <Link to="/SearchAccount">
-          {" "}
           <a className={classes.sign}>계정찾기</a>
         </Link>
         <br />

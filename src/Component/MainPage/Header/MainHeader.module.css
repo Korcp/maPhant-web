@@ -1,0 +1,59 @@
+.header {
+  background-color: #5299eb;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+}
+.content {
+  display: flex;
+  width: 96%;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boardList {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+}
+.boardLink{
+  margin-left: 1rem;
+  font-size : 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.search {
+  border-radius: 10px;
+  height: 15px;
+  display: flex;
+  background-color: #ffffff;
+  padding: 1%;
+  align-items: center;
+}
+.searchIcon {
+  border: 0;
+  background-color: #ffffff;
+}
+.searchInput {
+  max-height: 15px;
+  font-size: 18px;
+  border: 0;
+}
+.searchInput:focus {
+  outline: none;
+}
+
+
+.myPage {
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: 0;
+}
