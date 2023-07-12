@@ -18,7 +18,6 @@ function App() {
             <Route path="/SelectSch" element={<SelectSch />} />
             <Route path="/Signup" element={<Signup />} />
             <Route path="/SearchAccount" element={<SearchAccount />} />
-            <Route path="/SearchAccountAuth" element={<SearchAccountAuth />} />
             <Route path="/MainPage" element={<MainApp />}></Route>
           </Routes>
         </BrowserRouter>
