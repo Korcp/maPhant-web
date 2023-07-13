@@ -1,58 +1,70 @@
-import IconImg from "../img/Icon.png";
-import classes from "./MainHeader.module.css";
-import DarkToggle from "./DarkToggle";
+import React from "react";
 import { MdSearch } from "react-icons/md";
 
-function MainHeader({ username }: any) {
+import iconpng from "../img/icon2.jpeg";
+import DarkToggel from "./DarkToggle";
+
+import Styles from "./MainHeader.module.css";
+
+function MainHeaderSample() {
   return (
-    <header className={classes.header}>
-      <div className={classes.content}>
-        <div>
-          <img src={IconImg} alt="" />
-        </div>
-
-        <div style={{ color: "white" }}>소프트웨어 학과</div>
-
-        <nav>
-          <ul className={classes.boardList}>
-            <li className={classes.boardLink}>
-              <a href="">자유</a>
-            </li>
-            <li className={classes.boardLink}>
-              <a href="">지식</a>
-            </li>
-            <li className={classes.boardLink}>
-              <a href="">QnA</a>
-            </li>
-            <li className={classes.boardLink}>
-              <a href="">홍보</a>
-            </li>
-            <li className={classes.boardLink}>
-              <a href="">취업진로</a>
-            </li>
-            <li className={classes.boardLink}>
-              <a href="">취미</a>
-            </li>
-          </ul>
-        </nav>
-
-        <span className={classes.search}>
-          <button type="button" className={classes.searchIcon}>
-            <MdSearch size={18} />
-          </button>
-          <input
-            type="text"
-            className={classes.searchInput}
-            placeholder="검색"
-          />
-        </span>
-
-        <DarkToggle />
-
-        <button className={classes.myPage}>{username}</button>
+    <header className={Styles.header}>
+      <div className={Styles.icon}>
+        <img src={iconpng} />
       </div>
+      <h3 className={Styles.major}>소프트웨어학과</h3>
+      <nav>
+        <ul className={Styles.boardList}>
+          <li>
+            <a className={Styles.boardLink} href="">
+              자유
+            </a>
+          </li>
+          <span className={Styles.bar}></span>
+          <li>
+            <a className={Styles.boardLink} href="">
+              지식
+            </a>
+          </li>
+          <li>
+            <a className={Styles.boardLink} href="">
+              QnA
+            </a>
+          </li>
+          <span className={Styles.bar}></span>
+          <li>
+            <a className={Styles.boardLink} href="">
+              홍보
+            </a>
+          </li>
+          <li>
+            <a className={Styles.boardLink} href="">
+              취업/진로
+            </a>
+          </li>
+          <span className={Styles.bar}></span>
+          <li>
+            <a className={Styles.boardLink} href="">
+              취미
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <span className={Styles.search}>
+        <button type="button" className={Styles.searchIcon}>
+          <MdSearch size={18} />
+        </button>
+        <input type="text" className={Styles.searchInput} placeholder="검색" />
+      </span>
+
+      <div>
+        <DarkToggel />
+      </div>
+
+      <button className={Styles.userBtn}>사용자</button>
     </header>
   );
 }
 
-export default MainHeader;
+export default MainHeaderSample;
