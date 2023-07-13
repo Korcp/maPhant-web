@@ -76,7 +76,7 @@ function Signup() {
     if (!repwvalue) {
       setRepasswordError(true);
       input.setCustomValidity("비밀번호 확인을 입력하여 주세요");
-    } else if (password != repwvalue) {
+    } else if (password !== repwvalue) {
       setRepasswordError(true);
       input.setCustomValidity("위의 비밀번호와 동일하게 작성하여주세요");
     } else {
@@ -147,47 +147,40 @@ function Signup() {
 
   //회원가입 버튼 조건
   const PassPage = () => {
-    if (!email) {
+    let nullplusError = false;
+
+    if (!email || emailError) {
       setEmailError(true);
+      nullplusError = true;
     }
-    if (!password) {
+    if (!password || passwordError) {
       setPasswordError(true);
+      nullplusError = true;
     }
 
-    if (!Repassword) {
+    if (!Repassword || RepasswordError) {
       setRepasswordError(true);
+      nullplusError = true;
     }
 
-    if (!nickname) {
+    if (!nickname || nicknameError) {
       setNicknameError(true);
+      nullplusError = true;
     }
 
-    if (!school) {
+    if (!school || schoolError) {
       setschoolError(true);
+      nullplusError = true;
     }
 
-    if (!sNo) {
+    if (!sNo || sNoError) {
       setsNoError(true);
-    }
-    if (
-      emailError == true ||
-      passwordError == true ||
-      RepasswordError == true ||
-      nicknameError == true ||
-      schoolError == true ||
-      sNoError == true
-    ) {
-      alert("위의 빈칸을 입력해주시거나 조건에맞게 입력하여주세요");
+      nullplusError = true;
     }
 
-    if (
-      emailError === false &&
-      passwordError === false &&
-      RepasswordError === false &&
-      nicknameError === false &&
-      schoolError === false &&
-      sNoError === false
-    ) {
+    if (nullplusError) {
+      alert("위의 빈칸을 입력해주시거나 조건에 맞게 입력하여주세요");
+    } else {
       navigate("/SelectSch");
     }
     console.log(emailError);
