@@ -1,3 +1,5 @@
+/*eslint-disable*/
+
 import Signup from "./Component/SignupPage/Signup";
 import LoginPage from "./Component/LoginPage/LoginPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

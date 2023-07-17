@@ -20,11 +20,17 @@
   margin-left: 5%;
 }
 .sign {
-  margin-right: -55%;
-  text-align: right;
+  margin-right: -20%;
+  text-align: left;
   color: rgb(135, 196, 242);
   text-decoration: none;
+  font-size: 15px;
 }
+
+.foundPwd {
+  font-size: 15px;
+}
+
 .signup {
   text-align: right;
   color: rgb(135, 196, 242);

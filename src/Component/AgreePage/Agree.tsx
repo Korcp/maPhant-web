@@ -8,6 +8,7 @@ function Agree() {
   const [checked2, SetChecked2] = useState(false); // 두번째 약관 체크
   const [checked3, SetChecked3] = useState(false); // 세번째 약관 체크
   const navigate = useNavigate();
+  
   function allCheck() {
     if (
       checked1 === checked2 &&
@@ -33,7 +34,7 @@ function Agree() {
   }
 
   function btnChecked() {
-    //disable떄문에 실행안되는듯;
+    //disable때문에 실행안되는듯;
     if (!(checked1 && checked2 && checked3)) {
       alert("모든 약관을 동의해야 합니다.");
     } else navigate("/Signup");

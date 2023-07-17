@@ -34,12 +34,15 @@ function LoginPage() {
           </button>
         </Link>
         <br />
-        <Link to="/SearchAccount">
-          <a className={classes.sign}>비밀번호 찾기</a>
-        </Link>
+        <p className={classes.foundPwd}>
+          비밀번호를 잊어버렸나요?ㅤ
+          <Link to="/SearchAccount">
+            <a className={classes.sign}>비밀번호찾기</a>
+          </Link>
+        </p>
         <br />
         <p className="new">
-          아직 회원이 아니신가요?
+          아직 회원이 아니신가요?ㅤ
           <Link to="/Agree">
             <a className={classes.signup}>회원가입</a>
           </Link>
