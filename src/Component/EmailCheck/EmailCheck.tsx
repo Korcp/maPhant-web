@@ -84,7 +84,7 @@ function EmailCheck() {
         </div>
 
         <div className="next">
-          <Link to="/">
+          <Link to="/SelectSch">
             <button type="submit" className="SelectBtn">
               완료
             </button>
