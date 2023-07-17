@@ -1,11 +1,13 @@
+/*eslint-disable*/
 import IconImg from "./img/Icon.png";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./SelectSch.css";
+import Dep from "./pages/Dep.js";
 
 function SelectSch() {
   const AdmissionYearDropdown = () => {
     const Listmajor = [
-      "인문계열",
       "자연계열",
       "사회계열",
       "인문계열",
@@ -18,7 +20,7 @@ function SelectSch() {
       <div className="outer">
         <nav className="margin">
           <div className="imgbox">
-            <img src={IconImg} alt="" />
+            <img src={ IconImg } alt="" />
             <label>
               <b>학과 선택</b>
             </label>
@@ -27,16 +29,7 @@ function SelectSch() {
           <div className="Title">
             <label>전공계열</label>
             <br />
-            <select>
-              <option value="" disabled selected>
-                학과선택
-              </option>
-              {Listmajor.map((major) => (
-                <option placeholder="전공계열을 선택하여 주시기바랍니다.">
-                  {major}
-                </option>
-              ))}
-            </select>
+            <Dep />
           </div>
 
           <div className="Major">
@@ -45,7 +38,7 @@ function SelectSch() {
             <input
               type="text"
               id="majorId"
-              placeholder="학과를 입력하여주세요"
+              placeholder="학과를 입력해주세요."
             />
           </div>
           <div className="next">
