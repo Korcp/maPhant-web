@@ -8,6 +8,7 @@ import SelectSch from "./Component/SelectSchPage/SelectSch";
 import SearchAccount from "./Component/SearchAccount/SearchAccount";
 import SearchAccountAuth from "./Component/SearchAccount/SearchAccount";
 import MainApp from "./Component/MainPage/MainApp";
+import EmailCheck from "./Component/EmailCheck/EmailCheck";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/Agree" element={<Agree />} />
             <Route path="/SelectSch" element={<SelectSch />} />
             <Route path="/Signup" element={<Signup />} />
+            <Route path="/EmailCheck" element={<EmailCheck />} />
             <Route path="/SearchAccount" element={<SearchAccount />} />
             <Route path="/MainPage" element={<MainApp />}></Route>
           </Routes>

@@ -181,14 +181,8 @@ function Signup() {
     if (nullplusError) {
       alert("위의 빈칸을 입력해주시거나 조건에 맞게 입력하여주세요");
     } else {
-      navigate("/SelectSch");
+      navigate("/EmailCheck");
     }
-    console.log(emailError);
-    console.log(passwordError);
-    console.log(RepasswordError);
-    console.log(nicknameError);
-    console.log(schoolError);
-    console.log(sNoError);
   };
   return (
     <div className="SignupMain">
