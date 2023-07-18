@@ -50,6 +50,10 @@ function EmailCheck() {
     }
   }, [time]);
 
+  if (time == 0) {
+    alert("인증 요청을 다시해주세요.");
+  }
+
   const formatTime = (seconds: number): string => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
